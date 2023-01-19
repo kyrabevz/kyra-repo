@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <!-- HEAD -->
+  <head>
+    <title>Online Application</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="form_style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro">
+  </head>
+
+  <!-- BODY -->
+  <body>
+    <div class='container'>
+    <header>
+      <h1>Online Application</h1>
+      <p id='form-description'>We would love to meet your dog! Please fill out the form below and we will get in contact with you to schedule a meet & greet. Please be aware
+      that <strong><em>we only accept dogs that are at least 6 months old</em></strong>.</p>
+      <hr>
+    </header>
+
+    <!-- FORM -->
+    <form action='/apply.html'>
+      <!-- FORM: ABOUT YOU -->
+      <fieldset name="about-you">
+        <h2>About you:</h2>
+        <label for='name'>First Name* <input type="text" name="name" id='name' required></label>
+        <label for='surname'>Surname* <input type="text" name="surname" id='surname' required></label>
+        <label for='mobile-number'>Mobile Number* <input type="text" name="mobile-number" id='mobile-number' required></label>
+        <label for='email'>Email* <input type="email" name="email" id='email' required></label>
+        <label for='postal-code'>Postal Code* <input type="text" name="postal-code" id='postal-code' required></label>
+      </fieldset>
+      <!-- FORM: ABOUT YOUR DOG -->
+      <fieldset>
+        <h2>About your dog:</h2>
+        <label for='dog-name'>Dog's Name* <input type='text' name='dog-name' id='dog-name' required></label>
+        <label for='dog-breed'>Dog's Breed
+          <select name='dog-breed' id='dog-breed' required>
+            <option value='german-shephard'> German Shephard</option>
+            <option value='dachshund'> Dachshund</option>
+            <option value='golden-retriever'> Golden Retriever</option>
+            <option value='poodle'> Poodle</option>
+            <option value='pug'> Pug</option>
+            <option value='mixed'> Mixed</option>
+            <option value='other'> Other</option>
+          </select>
+           </label>
+        <label for='dog-age'>Dog's Age (years) <input type='number' name='dog-age' id='dog-age' min="0" max='25' required></label>
+        <label>Sex*<br>
+          <label for='female'>Female <input class ='radio' type='radio' name='female-male' id='female' required></label>
+          <label for='male'>Male <input class='radio' type='radio' name='female-male' id='male' required></label>
+        </label><br>
+        <label>Neutered?*<br>
+          <label for='neutered-yes'>Yes <input class='radio' type='radio' name='neutered-yn' id='neutered-yes' required></label>
+          <label for='neutered-no'>No <input class='radio' type='radio' name='neutered-yn' id='neutered-no' required></label>
+        </label><br>
+        <label for='comments'>Let us know if there is anything we should know about your dog<textarea name="comments" id='comments' rows="5" cols="60"></textarea></label>
+        <label for='terms-conditions'>Do you agree to the terms & conditions?* <input type='checkbox' name='terms-conditions' id='terms-conditions' required></label>
+        <label for='six-months'>Is your dog at least 6 months?* <input type='checkbox' name='six-months' id='six-months' required></label>
+        <input type="button" name="submit" value="Submit">
+      </fieldset>
+    </form>
+    </div>
+  </body>
+</html>
